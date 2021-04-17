@@ -1,0 +1,17 @@
+Api-1:
+Url: POST http://localhost:8080/authenticate
+Input Json: {
+            	"username":"foo",
+            	"password":"foo"
+
+            }
+
+Output:
+{
+    "jwt": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmb28iLCJleHAiOjE2MTg3MTk1ODMsImlhdCI6MTYxODY4MzU4M30.jJFtBHQSz2slwDNe_eNUAYH8jwiyNncwWWINWbBD6cY"
+}
+
+Api-2:
+GET http://localhost:8080/hello
+Authorization - Bearer Token- eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmb28iLCJleHAiOjE2MTg3MTk1ODMsImlhdCI6MTYxODY4MzU4M30.jJFtBHQSz2slwDNe_eNUAYH8jwiyNncwWWINWbBD6cY
+Output: Hello World
